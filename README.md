@@ -103,6 +103,10 @@ Different libraries excel at different tasks:
 
 ## 4. Feature Formulas
 
+These features are based on methods from:
+
+> **Predicting the impacts of mutations on protein-ligand binding affinity based on molecular dynamics simulations and machine learning methods**
+
 ### 3.1 Protein-ligand Closeness (cn)
 
 $$c_n = -\frac{\sum_{R_k \in BSR} D(\bar{X}_{R_k}, \bar{X}_{LIG})}{|BSR|}$$

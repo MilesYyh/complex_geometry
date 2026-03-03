@@ -25,6 +25,10 @@
 
 ## 2. 公式详解
 
+本文特征计算方法基于以下研究：
+
+> **Predicting the impacts of mutations on protein-ligand binding affinity based on molecular dynamics simulations and machine learning methods**
+
 ### 2.1 Protein-ligand Closeness (cn)
 
 **公式**：

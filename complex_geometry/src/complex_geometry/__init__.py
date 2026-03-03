@@ -12,7 +12,7 @@ Usage:
 """
 
 __version__ = "0.1.0"
-__author__ = "Your Name"
+__author__ = "YeYuhao.Miles"
 __license__ = "MIT"
 
 from complex_geometry.core import ProteinLigandGeometry, analyze_trajectory

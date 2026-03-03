@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: protein-ligand-geometry
+Version: 0.1.0
+Summary: Calculate local geometrical features for protein-ligand systems
+Author-email: Your Name <your.email@example.com>
+License: MIT
+Project-URL: Homepage, https://github.com/yourusername/protein-ligand-geometry
+Project-URL: Documentation, https://protein-ligand-geometry.readthedocs.io
+Project-URL: Repository, https://github.com/yourusername/protein-ligand-geometry
+Project-URL: Issues, https://github.com/yourusername/protein-ligand-geometry/issues
+Keywords: bioinformatics,protein-ligand,structural-biology,molecular-dynamics
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Description-Content-Type: text/markdown
+Requires-Dist: numpy>=1.20
+Requires-Dist: biotite>=0.40.0
+Provides-Extra: all
+Requires-Dist: mdanalysis>=2.0.0; extra == "all"
+Requires-Dist: matplotlib>=3.5.0; extra == "all"
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: black>=23.0.0; extra == "dev"
+Requires-Dist: flake8>=6.0.0; extra == "dev"
+Requires-Dist: mypy>=1.0.0; extra == "dev"

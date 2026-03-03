@@ -1,0 +1,16 @@
+{
+  "closeness": -7.781920687357585,
+  "sasa": 19381.1640625,
+  "sasa_binding_site": 1190.0,
+  "orientation": 0.31262910940929917,
+  "contacts_total": 5,
+  "contacts_hydrophobic": 0,
+  "contacts_polar": 5,
+  "hydrogen_bonds": 0,
+  "com_distance": 18.62717089883969,
+  "cog_distance": 18.673147201538086,
+  "min_distance": 0.0,
+  "n_protein_atoms": 3220,
+  "n_ligand_atoms": 46,
+  "n_binding_residues": 15
+}

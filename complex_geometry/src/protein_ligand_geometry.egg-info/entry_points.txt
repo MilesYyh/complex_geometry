@@ -1,0 +1,2 @@
+[console_scripts]
+plg-calc = protein_ligand_geometry.cli:main

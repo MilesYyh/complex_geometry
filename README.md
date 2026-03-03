@@ -105,7 +105,7 @@ Different libraries excel at different tasks:
 
 These features are based on methods from:
 
-> **Predicting the impacts of mutations on protein-ligand binding affinity based on molecular dynamics simulations and machine learning methods**
+> **[Predicting the impacts of mutations on protein-ligand binding affinity based on molecular dynamics simulations and machine learning methods](https://doi.org/10.1016/j.csbj.2020.02.007)**
 
 ### 3.1 Protein-ligand Closeness (cn)
 

@@ -1,0 +1,2 @@
+[console_scripts]
+cpx-calc = complex_geometry.cli:main

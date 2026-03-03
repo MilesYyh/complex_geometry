@@ -1,8 +1,74 @@
 # Complex Geometry
 
-Unified implementation for calculating local geometrical features of protein-ligand systems, combining MDAnalysis and Biotite libraries.
+<font color=yellow>
+<strong>
+<em>
+Implementation for calculating local geometrical features of protein-ligand systems, combining MDAnalysis and Biotite libraries.
+</em>
+</strong>
+</font>
 
-## 1. Overview
+## 1. Quick Start
+
+### Installation
+
+```bash
+# Clone repository
+git clone git@github.com:MilesYyh/complex_geometry.git
+cd complex_geometry/complex_geometry
+
+# Install dependencies
+pip install numpy biotite mdanalysis
+
+# Install in development mode
+pip install -e .
+```
+
+### Run Example
+
+The `example/` folder contains PDB structure `1ZZT.pdb` (dihydrofolate reductase with substrate DP9).
+
+```bash
+cd example
+python -c "
+from complex_geometry import ProteinLigandGeometry
+geom = ProteinLigandGeometry('1ZZT.pdb', ligand_resname='DP9')
+features = geom.calculate_all_features()
+print(features)
+"
+
+# Or use CLI
+cpx-calc 1ZZT.pdb -l DP9
+```
+
+### Example Output
+
+**PDB: 1ZZT (Dihydrofolate reductase) + DP9 (substrate)**
+
+```
+closeness                     : -7.7819
+sasa                          : 19381.1641
+sasa_binding_site             : 1190.0000
+orientation                   : 0.3126
+
+contacts_total                : 5
+contacts_hydrophobic          : 0
+contacts_polar                : 5
+
+hydrogen_bonds                : 0
+
+com_distance                  : 18.6272
+cog_distance                 : 18.6731
+min_distance                  : 0.0000
+
+n_protein_atoms               : 3220
+n_ligand_atoms                : 46
+n_binding_residues           : 15
+```
+
+---
+
+## 2. Overview
 
 This package calculates five local geometrical features that characterize protein-ligand binding affinity.
 
@@ -18,7 +84,7 @@ This package calculates five local geometrical features that characterize protei
 
 ---
 
-## 2. Design Philosophy
+## 3. Design Philosophy
 
 Different libraries excel at different tasks:
 
@@ -35,7 +101,7 @@ Different libraries excel at different tasks:
 
 ---
 
-## 3. Feature Formulas
+## 4. Feature Formulas
 
 ### 3.1 Protein-ligand Closeness (cn)
 
@@ -80,23 +146,7 @@ $$h_b = \sum_{R_k \in BSR} n_{D \in R_k, A \in LIG} + \sum_{R_k \in BSR} n_{D \i
 
 ---
 
-## 4. Usage
-
-### 4.1 Installation
-
-```bash
-# Clone repository
-git clone git@github.com:MilesYyh/complex_geometry.git
-cd complex-geometry
-
-# Install dependencies
-pip install numpy biotite mdanalysis
-
-# Install in development mode
-pip install -e .
-```
-
-### 4.2 Python API
+## 5. Python API
 
 ```python
 from complex_geometry import ProteinLigandGeometry
@@ -120,67 +170,20 @@ print(features)
 # {'closeness': -8.72, 'sasa': 6781.39, 'orientation': 0.50, ...}
 ```
 
-### 4.3 Command Line
+### Command Line
 
 ```bash
 # Auto-detect chain
-plg-calc structure.pdb
+cpx-calc structure.pdb
 
 # Specify chain
-plg-calc structure.pdb -c A
+cpx-calc structure.pdb -c A
 
 # Select specific features
-plg-calc structure.pdb -c A --features closeness sasa contacts
+cpx-calc structure.pdb -c A --features closeness sasa contacts
 
 # Output to JSON
-plg-calc structure.pdb -c A -o results.json
-```
-
----
-
-## 5. Example
-
-### 5.1 Provided Example
-
-The `example/` folder contains PDB structure `1ZZT.pdp` (dihydrofolate reductase with substrate DP9) and sample output.
-
-```bash
-# Run example
-cd example
-python -c "
-from complex_geometry import ProteinLigandGeometry
-geom = ProteinLigandGeometry('1ZZT.pdb', ligand_resname='DP9')
-features = geom.calculate_all_features()
-print(features)
-"
-
-# Or use CLI
-cpx-calc 1ZZT.pdb -l DP9
-```
-
-### 5.2 Example Output
-
-**PDB: 1ZZT (Dihydrofolate reductase) + DP9 (substrate)**
-
-```
-closeness                     : -7.7819
-sasa                          : 19381.1641
-sasa_binding_site             : 1190.0000
-orientation                   : 0.3126
-
-contacts_total                : 5
-contacts_hydrophobic          : 0
-contacts_polar                : 5
-
-hydrogen_bonds                : 0
-
-com_distance                  : 18.6272
-cog_distance                 : 18.6731
-min_distance                  : 0.0000
-
-n_protein_atoms               : 3220
-n_ligand_atoms                : 46
-n_binding_residues           : 15
+cpx-calc structure.pdb -c A -o results.json
 ```
 
 ---

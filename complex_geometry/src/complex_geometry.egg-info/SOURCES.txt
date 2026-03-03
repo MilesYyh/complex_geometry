@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+src/complex_geometry/__init__.py
+src/complex_geometry/cli.py
+src/complex_geometry/core.py
+src/complex_geometry.egg-info/PKG-INFO
+src/complex_geometry.egg-info/SOURCES.txt
+src/complex_geometry.egg-info/dependency_links.txt
+src/complex_geometry.egg-info/entry_points.txt
+src/complex_geometry.egg-info/requires.txt
+src/complex_geometry.egg-info/top_level.txt

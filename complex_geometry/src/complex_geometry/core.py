@@ -1,11 +1,11 @@
-#!/usr/bin/env python3
-
+#!/usr/bin/env python
+# -*- encoding: utf-8 -*-
 # '''
 # @File    :   local_geometry_features.py
-# @Time    :   2022/12/02
-# @Author  :   Your Name
-# @Contact :   your.email@example.com
-# @License :   MIT
+# @Time    :   2022/08/23 GuangZhou,China
+# @Author  :   Yuhao Ye (Miles)
+# @Contact :   milesyeyuhao@gmail.com
+# @License :   https://github.com/MilesYyh
 # @TODO ->
 # '''
 

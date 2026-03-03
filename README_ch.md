@@ -226,12 +226,8 @@ def _find_binding_site(self):
 ```bash
 # 克隆仓库
 git clone git@github.com:MilesYyh/complex_geometry.git
-cd complex-geometry
-
-# 安装依赖
-pip install numpy biotite mdanalysis
-
-# 开发模式安装
+cd complex-geometry/complex_geometry
+pip install numpy biotite mdanalysis -i https://pypi.mirrors.ustc.edu.cn/simple
 pip install -e .
 ```
 

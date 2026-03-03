@@ -86,7 +86,7 @@ $$h_b = \sum_{R_k \in BSR} n_{D \in R_k, A \in LIG} + \sum_{R_k \in BSR} n_{D \i
 
 ```bash
 # Clone repository
-git clone https://github.com/yourusername/complex-geometry.git
+git clone git@github.com:MilesYyh/complex_geometry.git
 cd complex-geometry
 
 # Install dependencies

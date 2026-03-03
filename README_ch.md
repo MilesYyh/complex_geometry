@@ -225,7 +225,7 @@ def _find_binding_site(self):
 
 ```bash
 # 克隆仓库
-git clone https://github.com/yourusername/complex-geometry.git
+git clone git@github.com:MilesYyh/complex_geometry.git
 cd complex-geometry
 
 # 安装依赖
